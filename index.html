@@ -1,49 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Meu Site Profissional</title>
-<link rel="stylesheet" href="estilos.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meu Site Profissional</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-<h1>Meu Site Profissional</h1>
-<nav>
-<a href="#sobre">Sobre</a>
-<a href="#servicos">Serviços</a>
-<a href="#contato">Contato</a>
-</nav>
-</header>
 
+  <!-- header / hero -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <!-- fallback to local uploaded image + free image as backup -->
+    <div class="hero-bg" style="background-image: url('/mnt/data/121f80d2-4cee-4132-8c91-14861be5e1e8.png'), url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');"></div>
 
-<section id="sobre" class="secao">
-<h2>Sobre Mim</h2>
-<p>Descrição profissional aqui.</p>
-</section>
+    <div class="hero-inner">
+      <h1 class="reveal">Meu Site Profissional</h1>
+      <p class="lead reveal">Crie um currículo profissional com AI — rápido, moderno e por apenas R$ 9,90.</p>
 
+      <div class="hero-cta reveal-group">
+        <a href="#servicos" class="btn primary cta-pulse">Ver Modelos</a>
+        <a href="#contato" class="btn outline">Entrar em contato</a>
+      </div>
+    </div>
+  </header>
 
-<section id="servicos" class="secao">
-<h2>Serviços</h2>
-<ul>
-<li>Serviço 1</li>
-<li>Serviço 2</li>
-<li>Serviço 3</li>
-</ul>
-</section>
+  <!-- nav sticky -->
+  <nav class="topbar">
+    <div class="container">
+      <div class="brand">Crie seu currículo com AI</div>
+      <div class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <button id="menu-btn" class="menu-toggle" aria-label="abrir menu">☰</button>
+    </div>
+  </nav>
 
+  <!-- sobre -->
+  <main>
+    <section id="sobre" class="secao reveal">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h2>Sobre Mim</h2>
+            <p>Somos uma plataforma que usa inteligência artificial para montar currículos profissionais, prontos para envio e otimização por vaga. Nossa prioridade é praticidade, qualidade e preço baixo.</p>
+            <ul class="benefits">
+              <li>✅ Currículo em PDF pronto para envio</li>
+              <li>✅ Modelos modernos e ATS-friendly</li>
+              <li>✅ Entrega rápida (minutos)</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <img class="card-photo reveal" src="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg" alt="Profissional trabalhando">
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="contato" class="secao">
-<h2>Contato</h2>
-<form id="form-contato">
-<input type="text" id="nome" placeholder="Seu nome" required />
-<input type="email" id="email" placeholder="Seu email" required />
-<textarea id="mensagem" placeholder="Mensagem"></textarea>
-<button type="submit">Enviar</button>
-</form>
-</section>
+    <!-- serviços -->
+    <section id="servicos" class="secao light reveal-group">
+      <div class="container">
+        <h2>Serviços</h2>
+        <p class="subtitle">Escolha o que você precisa — criamos o currículo e entregamos em PDF</p>
 
+        <div class="cards">
+          <article class="card reveal">
+            <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="">
+            <h3>Currículo Rápido</h3>
+            <p>Modelo simples e objetivo — ideal para envio por e-mail.</p>
+            <a class="btn small" href="#contato">Contratar R$9,90</a>
+          </article>
 
-<script src="script.js"></script>
+          <article class="card reveal">
+            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="">
+            <h3>Currículo Moderno</h3>
+            <p>Layout moderno, cores e tipografia otimizadas.</p>
+            <a class="btn small" href="#contato">Contratar R$9,90</a>
+          </article>
+
+          <article class="card reveal">
+            <img src="https://images.pexels.com/photos/3182838/pexels-photo-3182838.jpeg" alt="">
+            <h3>Currículo Completo</h3>
+            <p>Formato avançado com carta de apresentação opcional.</p>
+            <a class="btn small" href="#contato">Contratar R$9,90</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- contato -->
+    <section id="contato" class="secao reveal">
+      <div class="container">
+        <h2>Contato</h2>
+        <p class="subtitle">Quer que eu personalize? Envie uma mensagem rápida.</p>
+
+        <form id="form-contato" class="form-grid">
+          <input id="nome" name="nome" placeholder="Seu nome" required>
+          <input id="email" name="email" type="email" placeholder="Seu e-mail" required>
+          <input id="telefone" name="telefone" placeholder="Telefone (opcional)" >
+          <textarea id="mensagem" name="mensagem" placeholder="Escreva sua necessidade..." rows="4"></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Enviar Mensagem</button>
+            <button type="button" class="btn outline" id="abrir-wh">Abrir WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 — Crie seu currículo com AI • Pagamento via PIX</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
