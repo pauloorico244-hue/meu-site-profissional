@@ -1,5 +1,8 @@
-function abrirWhatsApp() {
-    const numero = "5599999999999"; // coloque seu número aqui
-    const mensagem = "Olá! Gostaria de saber mais sobre seus serviços.";
-    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`, "_blank");
-}
+// Simples alerta ao enviar formulário
+
+
+document.getElementById("form-contato").addEventListener("submit", function (e) {
+e.preventDefault();
+alert("Mensagem enviada com sucesso! Obrigado pelo contato.");
+});
+
